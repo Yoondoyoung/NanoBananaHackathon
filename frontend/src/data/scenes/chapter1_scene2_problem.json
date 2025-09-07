@@ -1,0 +1,52 @@
+{
+  "scene_id": "chapter1_scene2_problem",
+  "scene_name": "The Missing Tear of the Star",
+  "location": {
+    "name": "Magic Detective Guild Reception",
+    "reference_image": "https://wvmkurseomwhrzamqadk.supabase.co/storage/v1/object/public/character-images/background-images/Gemini_Generated_Image_ricyxtricyxtricy.png",
+    "description": "A warm and cozy wooden building reception area with a magical atmosphere"
+  },
+  "time_of_day": "morning",
+  "atmosphere": "worried and urgent",
+  "main_focus": "Nano's problem explanation",
+  "style": {
+    "art_style": "2D illustration",
+    "palette": "bright and warm colors",
+    "details": "suitable for children's games"
+  },
+  "characters": [
+    {
+      "name": "Nano",
+      "role": "Guild Receptionist",
+      "description": "A young woman with a worried expression delivering important news",
+      "emotion": "worry"
+    },
+    {
+      "name": "Player",
+      "role": "Detective Assistant",
+      "description": "Focused on Lyra's words, trying to understand the situation",
+      "emotion": "focus"
+    }
+  ],
+  "props": [
+    {
+      "name": "Reception Desk",
+      "description": "A warm wooden reception desk"
+    },
+    {
+      "name": "Magic Lanterns",
+      "description": "Softly glowing magical lanterns"
+    }
+  ],
+  "action": "Nano explains the big problem that has occurred in the kingdom.",
+  "context": {
+    "event": "Missing 'Tear of the Star' Gem Case",
+    "mission_status": "Understanding the problem situation",
+    "player_status": "Understanding the situation"
+  },
+  "dialogue": {
+    "speaker": "Nano",
+    "text": "Actually, since this morning, something terrible has happened in the kingdom! The 'Tear of the Star' gem that maintains the kingdom's vitality has disappeared without a trace! Without the gem, the magical power is gradually weakening... Everyone is worried."
+  },
+  "next_scene_id": "chapter1_scene3_hope"
+}

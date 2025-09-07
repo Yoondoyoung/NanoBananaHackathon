@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #2c3e50;
+  min-height: 100vh;
+  overflow: hidden; /* iPad에서 스크롤 방지 */
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* iPad 전용 스타일 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* 터치 인터페이스 최적화 */
+button, .interactive {
+  min-height: 44px; /* Apple Human Interface Guidelines */
+  min-width: 44px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 애니메이션 */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 로딩 화면 */
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.loading-content {
+  text-align: center;
+  color: white;
+}
+
+.loading-content p {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 연결 상태 표시 */
+.connection-status {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(231, 76, 60, 0.9);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+/* 나레이션 상태 표시 */
+.narration-status {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(0, 150, 255, 0.9);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  animation: pulse 2s infinite;
+}
+
+/* 사용자 상호작용 안내 */
+.interaction-prompt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.interaction-prompt-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  animation: bounce 2s infinite;
+}
+
+.interaction-prompt-box h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.interaction-prompt-box p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.touch-indicator {
+  font-size: 48px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* 캐릭터 생성 프롬프트 */
+.character-creation-prompt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.creation-prompt-box {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  max-width: 400px;
+}
+
+.creation-prompt-box h3 {
+  color: #667eea;
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.creation-prompt-box p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.create-character-btn {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.create-character-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* iPad 최적화 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .creation-prompt-box {
+    padding: 50px;
+    max-width: 500px;
+  }
+  
+  .creation-prompt-box h3 {
+    font-size: 28px;
+  }
+  
+  .creation-prompt-box p {
+    font-size: 18px;
+  }
+  
+  .create-character-btn {
+    padding: 20px 40px;
+    font-size: 20px;
+  }
+}

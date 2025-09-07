@@ -1,0 +1,52 @@
+{
+  "scene_id": "chapter1_scene5_map",
+  "scene_name": "Arcadia Kingdom Map",
+  "location": {
+    "name": "Magic Detective Guild Reception",
+    "reference_image": "https://wvmkurseomwhrzamqadk.supabase.co/storage/v1/object/public/character-images/background-images/Gemini_Generated_Image_ricyxtricyxtricy.png",
+    "description": "A warm and cozy wooden building reception area with a magical atmosphere"
+  },
+  "time_of_day": "morning",
+  "atmosphere": "explanatory and educational",
+  "main_focus": "Lyra's map explanation",
+  "style": {
+    "art_style": "2D illustration",
+    "palette": "bright and warm colors",
+    "details": "suitable for children's games"
+  },
+  "characters": [
+    {
+      "name": "Lyra",
+      "role": "Guild Receptionist",
+      "description": "A young woman unfolding and explaining the map",
+      "emotion": "explanatory"
+    },
+    {
+      "name": "Player",
+      "role": "Detective Assistant",
+      "description": "Looking at the map and trying to understand the regions",
+      "emotion": "learning"
+    }
+  ],
+  "props": [
+    {
+      "name": "Arcadia Kingdom Map",
+      "description": "A map with clues marked by a glowing magic wand"
+    },
+    {
+      "name": "Reception Desk",
+      "description": "A warm wooden reception desk"
+    }
+  ],
+  "action": "Lyra shows and explains the Arcadia Kingdom map.",
+  "context": {
+    "event": "Missing 'Tear of the Star' Gem Case",
+    "mission_status": "Understanding the region",
+    "player_status": "Learning the map"
+  },
+  "dialogue": {
+    "speaker": "Lyra",
+    "text": "Look, this is our Arcadia Kingdom map! Right now we're at the 'Magic Castle', and Stella has gone to the 'Mushroom Forest' over there. Once you finish your preparation here, you can join Stella later!"
+  },
+  "next_scene_id": "chapter1_scene6_choice"
+}

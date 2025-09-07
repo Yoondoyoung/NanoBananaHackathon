@@ -1,0 +1,52 @@
+{
+  "scene_id": "chapter1_scene1_welcome",
+  "scene_name": "First Meeting with Nano",
+  "location": {
+    "name": "Magic Detective Guild Reception",
+    "reference_image": "https://wvmkurseomwhrzamqadk.supabase.co/storage/v1/object/public/character-images/background-images/Gemini_Generated_Image_ricyxtricyxtricy.png",
+    "description": "A warm and cozy wooden building reception area with a magical atmosphere"
+  },
+  "time_of_day": "morning",
+  "atmosphere": "warm and welcoming",
+  "main_focus": "Nano's welcome",
+  "style": {
+    "art_style": "2D illustration",
+    "palette": "bright and warm colors",
+    "details": "suitable for children's games"
+  },
+  "characters": [
+    {
+      "name": "Nano",
+      "role": "Guild Receptionist",
+      "description": "A young woman with a kind smile welcoming visitors with a friendly expression",
+      "emotion": "joy"
+    },
+    {
+      "name": "Player",
+      "role": "Detective Assistant",
+      "description": "Showing curiosity about the new environment",
+      "emotion": "curiosity"
+    }
+  ],
+  "props": [
+    {
+      "name": "Reception Desk",
+      "description": "A warm wooden reception desk"
+    },
+    {
+      "name": "Magic Lanterns",
+      "description": "Softly glowing magical lanterns"
+    }
+  ],
+  "action": "Nano warmly welcomes the new detective assistant.",
+  "context": {
+    "event": "Detective Assistant Joining",
+    "mission_status": "Welcome and Introduction",
+    "player_status": "Adapting to new environment"
+  },
+  "dialogue": {
+    "speaker": "Nano",
+    "text": "Welcome, brave detective assistant! You must be the assistant I've heard so much about! I'm Nano, the receptionist of the Magic Detective Guild."
+  },
+  "next_scene_id": "chapter1_scene2_problem"
+}

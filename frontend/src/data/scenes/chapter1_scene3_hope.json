@@ -1,0 +1,52 @@
+{
+  "scene_id": "chapter1_scene3_hope",
+  "scene_name": "Hope with Detective Stella",
+  "location": {
+    "name": "Magic Detective Guild Reception",
+    "reference_image": "https://wvmkurseomwhrzamqadk.supabase.co/storage/v1/object/public/character-images/background-images/Gemini_Generated_Image_ricyxtricyxtricy.png",
+    "description": "A warm and cozy wooden building reception area with a magical atmosphere"
+  },
+  "time_of_day": "morning",
+  "atmosphere": "hopeful and positive",
+  "main_focus": "Nano's message of hope",
+  "style": {
+    "art_style": "2D illustration",
+    "palette": "bright and warm colors",
+    "details": "suitable for children's games"
+  },
+  "characters": [
+    {
+      "name": "Nano",
+      "role": "Guild Receptionist",
+      "description": "A young woman with a hopeful smile encouraging courage",
+      "emotion": "hope"
+    },
+    {
+      "name": "Player",
+      "role": "Detective Assistant",
+      "description": "Feeling hope from Lyra's words and showing enthusiasm",
+      "emotion": "enthusiasm"
+    }
+  ],
+  "props": [
+    {
+      "name": "Reception Desk",
+      "description": "A warm wooden reception desk"
+    },
+    {
+      "name": "Magic Lanterns",
+      "description": "Softly glowing magical lanterns"
+    }
+  ],
+  "action": "Nano speaks about the hope of working together with Detective Stella.",
+  "context": {
+    "event": "Missing 'Tear of the Star' Gem Case",
+    "mission_status": "Delivering message of hope",
+    "player_status": "Feeling hope"
+  },
+  "dialogue": {
+    "speaker": "Nano",
+    "text": "But don't worry! Our Magic Detective Guild has the best detective, Stella, and now you're here too! Stella has just headed to the 'Mushroom Forest' following the first clue."
+  },
+  "next_scene_id": "chapter1_scene4_preparation"
+}

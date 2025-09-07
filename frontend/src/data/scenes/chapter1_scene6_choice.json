@@ -1,0 +1,63 @@
+{
+  "scene_id": "chapter1_scene6_choice",
+  "scene_name": "First Step as Detective Assistant",
+  "location": {
+    "name": "Magic Detective Guild Reception",
+    "reference_image": "https://wvmkurseomwhrzamqadk.supabase.co/storage/v1/object/public/character-images/background-images/Gemini_Generated_Image_ricyxtricyxtricy.png",
+    "description": "A warm and cozy wooden building reception area with a magical atmosphere"
+  },
+  "time_of_day": "morning",
+  "atmosphere": "decisive and hopeful",
+  "main_focus": "Player's choice",
+  "style": {
+    "art_style": "2D illustration",
+    "palette": "bright and warm colors",
+    "details": "suitable for children's games"
+  },
+  "characters": [
+    {
+      "name": "Lyra",
+      "role": "Guild Receptionist",
+      "description": "A young woman reaching out to the player with a smile",
+      "emotion": "expectation"
+    },
+    {
+      "name": "Player",
+      "role": "Detective Assistant",
+      "description": "Contemplating Lyra's proposal",
+      "emotion": "contemplation"
+    }
+  ],
+  "props": [
+    {
+      "name": "Reception Desk",
+      "description": "A warm wooden reception desk"
+    },
+    {
+      "name": "Arcadia Kingdom Map",
+      "description": "A map with clues marked by a glowing magic wand"
+    }
+  ],
+  "action": "Lyra asks the player if they want to take their first step as a detective assistant.",
+  "context": {
+    "event": "Missing 'Tear of the Star' Gem Case",
+    "mission_status": "Final decision stage",
+    "player_status": "Contemplating the choice"
+  },
+  "dialogue": {
+    "speaker": "Lyra",
+    "text": "Well then, shall we take your first step as a magic detective assistant? I'll help you!"
+  },
+  "choices": [
+    {
+      "text": "Yes, please help me! I want to become a detective!",
+      "next_scene_id": "chapter1_scene7_tutorial_start",
+      "consequence": "Player accepts becoming a detective assistant and starts the tutorial."
+    },
+    {
+      "text": "Wait, please explain in more detail.",
+      "next_scene_id": "chapter1_scene7_detailed_explanation",
+      "consequence": "Player requests more detailed explanation."
+    }
+  ]
+}

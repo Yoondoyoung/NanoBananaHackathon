@@ -1,0 +1,258 @@
+.story-system {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-characters {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.character-npc,
+.character-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+.character-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.character-name {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.dialogue-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  z-index: 3;
+}
+
+.dialogue-box {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.dialogue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.dialogue-header .character-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin: 0;
+  background: none;
+  padding: 0;
+}
+
+.playing-indicator {
+  font-size: 1.2rem;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.dialogue-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.dialogue-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.choice-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.choice-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.choice-button:active {
+  transform: translateY(0);
+}
+
+.next-button {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #333;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.next-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.next-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.story-loading,
+.story-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.story-error button {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.story-error button:hover {
+  background: #ff5252;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .story-characters {
+    padding: 1rem;
+  }
+  
+  .character-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .dialogue-container {
+    padding: 1rem;
+  }
+  
+  .dialogue-box {
+    padding: 1.5rem;
+  }
+  
+  .dialogue-text {
+    font-size: 1.1rem;
+  }
+  
+  .choice-button,
+  .next-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .dialogue-text {
+    font-size: 1rem;
+  }
+  
+  .choice-button,
+  .next-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
